@@ -1,4 +1,4 @@
-# Reto_3POO
+# Reto3_POO
 >1.Ejercicio de clase
 
 ```python
