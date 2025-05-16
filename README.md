@@ -165,3 +165,42 @@ if __name__ == "__main__":
     order.mostrar_orden()
 
 ```
+Diagrama UML del restaurante
+```mermaid
+classDiagram
+    class MenuItem {
+        +name: String
+        +price: float
+        +calcuar_precio_total(items)
+    }
+
+    class Beverage {
+        +size: String
+    }
+
+    class MainCourse {
+        +rice: bool
+        +salad: bool
+    }
+
+    class Apetizer {
+    }
+
+    class Dessert {
+    }
+
+    class Order {
+        +orden: List<MenuItem>
+        +anadir_orden(item: MenuItem)
+        +calcular_precio_total()
+        +mostrar_orden()
+    }
+
+    MenuItem <|-- Beverage
+    MenuItem <|-- MainCourse
+    MenuItem <|-- Apetizer
+    MenuItem <|-- Dessert
+
+    Order *-- MenuItem
+
+```
